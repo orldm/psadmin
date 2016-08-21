@@ -20,4 +20,4 @@ var About = React.createClass({
         );
     }
 });
-module.exports = Home;
+module.exports = About;
