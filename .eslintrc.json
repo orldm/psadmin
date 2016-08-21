@@ -5,8 +5,10 @@
         "standard",
         "promise"
     ],
-    "ecmaFeatures": {
+    "parserOptions": {
+        "ecmaFeatures": {
         "jsx": true
+        }
     },
     "env": {
         "browser": true,
