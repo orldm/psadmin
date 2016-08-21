@@ -26,9 +26,9 @@ var config = {
 gulp.task('connect', function() {
     connect.server({
         root: ['dist'],
-        port: process.env.PORT || 5000,
-        // base: config.devBaseUrl,
-        livereload: false
+        port: config.port,
+        base: config.devBaseUrl,
+        livereload: true
     });
 });
 
@@ -79,4 +79,5 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.js, ['js', 'lint']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'serveprod']);
+gulp.task('deploy', ['html', 'js', 'css', 'serveprod']);
+gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch']);
