@@ -37,6 +37,14 @@ gulp.task('open', ['connect'], function() {
         .pipe(open('', {url: config.devBaseUrl + ':' + config.port + '/'}));
 });
 
+gulp.task('serveprod', function() {
+  connect.server({
+    root: ['dist'],
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
+
 gulp.task('html', function() {
     gulp.src(config.paths.html)
         .pipe(gulp.dest(config.paths.dist))
@@ -71,4 +79,4 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.js, ['js', 'lint']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'open']);
+gulp.task('default', ['html', 'js', 'css', 'serveprod']);
