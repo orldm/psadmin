@@ -6,13 +6,13 @@ var About = React.createClass({
             <div>
                 <h1>About</h1>
                 <p>
-                    This app uses following tchnologies:
+                    This app uses following technologies:
                     <ul>
                         <li>React</li>
                         <li>React Router</li>
                         <li>Flux</li>
                         <li>Node</li>
-                        <li>Gilp</li>
+                        <li>Gulp</li>
                         <li>Browserify</li>
                     </ul>
                 </p>
