@@ -11,7 +11,7 @@ var About = React.createClass({
         },
         willTransitionFrom: function(transition, component) {
             if (!confirm('Are you sure?')) {
-                transition.about();
+                transition.abort();
             }
         }
     },
